@@ -44,3 +44,18 @@ A web-based implementation of the popular 2048 puzzle game with multiple difficu
 ## Installation
 
 1. Clone the repository:
+https://github.com/FMS07/Oorjja_2048.git
+
+2. Open any of the HTML files in a web browser to start playing.
+
+## Customization
+
+You can customize the game by modifying the following:
+
+- Adjust grid sizes and difficulty levels in the HTML files
+- Modify colors and styling in `styles.css`
+- Tweak game mechanics and scoring in `script.js`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
