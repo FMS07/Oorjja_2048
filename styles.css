@@ -1,0 +1,52 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.board {
+    display: grid;
+    grid-gap: 10px;
+    width: 400px;
+    margin: 30px auto;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background-color: #cdc1b4;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.score-panel {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.tries {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.level-selection {
+    margin-bottom: 20px;
+}
+
+.level-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+}
