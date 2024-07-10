@@ -33,6 +33,13 @@ A web-based implementation of the popular 2048 puzzle game with multiple difficu
 
 7. After completing a level, you can progress to the next difficulty.
 
+## Uniqueness from the standard 2048
+The game's logic is designed in such a way that: 
+1. It iterates through each tile individually.
+2. For each non-zero tile, it checks spaces one by one in the direction of movement.
+3. It moves the tile to an empty space or merges it if it encounters a tile of the same value.
+4. This process stops as soon as it hits a non-matching tile or the edge..
+
 ## Files
 
 - `easy.html`: Easy difficulty (6x6 grid)
