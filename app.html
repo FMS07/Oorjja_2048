@@ -4,54 +4,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2048 Game - Welcome</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #faf8ef;
+            color: #776e65;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #faf8ef;
-            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            font-size: 18px;
         }
-        .cover-container {
-            text-align: center;
-            background-color: #bbada0;
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
             padding: 40px;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
         }
-        h1 {
-            color: #776e65;
-            font-size: 48px;
-            margin-bottom: 30px;
+        .left-column {
+            flex: 1;
+            padding-right: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .difficulty-button {
-            display: block;
-            width: 200px;
-            padding: 15px;
-            margin: 15px auto;
-            font-size: 18px;
-            color: white;
+        .right-column {
+            flex: 2;
+            padding-left: 40px;
+            border-left: 2px solid #bbada0;
+        }
+        h1 {
+            font-size: 64px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .play-button {
+            display: inline-block;
+            padding: 20px 60px;
+            font-size: 32px;
             background-color: #8f7a66;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-bottom: 30px;
         }
-        .difficulty-button:hover {
+        .play-button:hover {
             background-color: #776e65;
+            transform: scale(1.05);
+        }
+        .instructions {
+            text-align: left;
+        }
+        .instruction-step {
+            margin-bottom: 20px;
+        }
+        .tile-example {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #eee4da;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 2px;
+        }
+        .arrow-keys {
+            font-size: 24px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .grid-example {
+            display: inline-block;
+            margin: 20px 0;
+        }
+        .grid-row {
+            display: flex;
+        }
+        .grid-cell {
+            width: 40px;
+            height: 40px;
+            background-color: #cdc1b4;
+            border: 1px solid #bbada0;
+            border-radius: 3px;
+            margin: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="cover-container">
-        <h1>Welcome to 2048</h1>
-        <p>Choose your difficulty level:</p>
-        <button class="difficulty-button" onclick="window.location.href='easy.html'">Easy (6x6)</button>
-        <button class="difficulty-button" onclick="window.location.href='medium.html'">Medium (5x5)</button>
-        <button class="difficulty-button" onclick="window.location.href='hard.html'">Hard (4x4)</button>
+    <div class="container">
+        <div class="left-column">
+            <h1>Welcome<br>to 2048</h1>
+            <button class="play-button" onclick="window.location.href='easy.html'">Play</button>
+            <div class="grid-example">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell">2</div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell">4</div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="instructions">
+                <h2>How to Play 2048:</h2>
+                
+                <div class="instruction-step">
+                    1. Start with a 6x6 grid and two tiles (2 or 4).
+                </div>
+
+                <div class="instruction-step">
+                    2. Use arrow keys to move all tiles.
+                    <div class="arrow-keys">
+                        ↑<br>
+                        ← ↓ →
+                    </div>
+                </div>
+
+                <div class="instruction-step">
+                    3. Merge same-number tiles:
+                    <span class="tile-example">2</span> + 
+                    <span class="tile-example">2</span> = 
+                    <span class="tile-example">4</span>
+                </div>
+
+                <div class="instruction-step">
+                    4. New 2 or 4 tile appears after each move.
+                </div>
+
+                <div class="instruction-step">
+                    5. Combine tiles to reach 2048 and win!
+                </div>
+
+                <div class="instruction-step">
+                    6. Game ends when:
+                    <ul>
+                        <li>You create a 2048 tile (Win!)</li>
+                        <li>No more moves possible (Game over)</li>
+                    </ul>
+                </div>
+
+                <div class="instruction-step">
+                    7. Tips:
+                    <ul>
+                        <li>Keep largest tile in a corner</li>
+                        <li>Build a chain of decreasing values</li>
+                        <li>Plan ahead for each move</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
